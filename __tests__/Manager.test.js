@@ -1,6 +1,12 @@
-const randomNumber = require('../lib/Manager.js');
+const { default: expectationResultFactory } = require('jest-jasmine2/build/expectationResultFactory');
+const Manager = require('../lib/Manager.js');
 
-test('gets random number between 1 and 10', () => {
-  expect(randomNumber()).toBeGreaterThanOrEqual(1);
-  expect(randomNumber()).toBeLessThanOrEqual(10);
+it('should create the manager object', () => {
+  const manager = new Manager('Manager', 'myname', 0, 'myemail', 1);    
+
+
+  expect(manager.name).toBe('myname');
+  expect(manager.id).toEqual(0);
+  expect(manager.email).toBe('myemail');
+  expect(manager.phone).toBe(1);
 });
