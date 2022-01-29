@@ -1,7 +1,7 @@
 const Manager = require('../lib/Manager.js');
 
 it('should create the manager object', () => {
-  const manager = new Manager( 'myname', 0, 'myemail', 1);    
+  const manager = new Manager('myname', 0, 'myemail', 1);    
 
 
   expect(manager.name).toBe('myname');
