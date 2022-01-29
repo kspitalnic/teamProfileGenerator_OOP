@@ -1,6 +1,11 @@
-const randomNumber = require('../lib/Engineer.js');
+const Engineer = require('../lib/Engineer.js');
 
-test('gets random number between 1 and 10', () => {
-  expect(randomNumber()).toBeGreaterThanOrEqual(1);
-  expect(randomNumber()).toBeLessThanOrEqual(10);
+it('should create an object for each engineer', () => {
+  const engineer = new Engineer('name', 401, 'email@gmail.com', 'gitHub');
+
+  expect(engineer.name).toBe('myname');
+  expect(engineer.id).toEqual(0);
+  expect(engineer.email).toBe('myemail');
+  expect(engineer.phone).toBe(1);
+  expect(engineer.github).toBe('github')
 });
