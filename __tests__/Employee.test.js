@@ -1,6 +1,5 @@
-const randomNumber = require('../lib/Employee.js');
+const Employee = require('../lib/Employee.js');
 
-test('gets random number between 1 and 10', () => {
-  expect(randomNumber()).toBeGreaterThanOrEqual(1);
-  expect(randomNumber()).toBeLessThanOrEqual(10);
+it('should create an object for each employee', () => {
+  const employee = new Employee('name', 401, 'email@gmail.com')
 });
