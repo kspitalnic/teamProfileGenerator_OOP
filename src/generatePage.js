@@ -13,7 +13,8 @@ const generatePage = (employees) => {
         <div class = "card">
         <div class = "cardHead">
           <ul>  <h4>${Manager.getName()} </h4> </ul>
-          <ul> <h5><em>${Manager.getRole()}</em></h5> </ul>
+          <ul> <h5> <i class="fas fa-mug-hot"> </i></i>
+          <em> ${Manager.getRole()}</em></h5> </ul>
         </div>
         <div class = "cardBody">
            <ul>  <p class = "item"> Employee ID: ${Manager.getId()}</p></ul>
@@ -26,11 +27,14 @@ const generatePage = (employees) => {
 
     function generateEngineer (Engineer) {
         return `
+        //<i class="fas fa-glasses"></i>
+
         ${Engineer.getName()}`
     }
 
     function generateIntern (Intern) {
         return `
+        // <i class="fas fa-user-graduate"></i>
         ${Intern.getName()}`
     }
 
@@ -61,6 +65,8 @@ module.exports = team =>{
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
         <title>Team Profiles</title>
     </head>
     

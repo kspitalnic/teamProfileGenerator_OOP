@@ -60,8 +60,8 @@ const BuildTeam = () => {
             type: 'input',
             name: 'phone',
             message: `Please enter the manager's phone number:  `,
-            validate: managerPhone => {
-                if (isNaN(managerPhone)) {
+            validate: officeNumber => {
+                if (isNaN(officeNumber)) {
                     console.log('Please enter the manager"s phone number.')
                     return false;
                 } else {
