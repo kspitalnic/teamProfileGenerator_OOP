@@ -79,8 +79,8 @@ const BuildTeam = () => {
             const name = answers.name;
             const id = answers.id;
             const email = answers.email;
-            const phone = answers.phone;
-            const manager = new Manager(name, id, email, phone);
+            const officeNumber = answers.officeNumber;
+            const manager = new Manager(name, id, email, officeNumber);
             employees.push(manager);
             console.log(manager);
             console.log(employees);
@@ -180,7 +180,6 @@ const addMember = () => {
             const name = memberAnswers.name;
             const id = memberAnswers.id;
             const email = memberAnswers.email;
-            const phone = memberAnswers.phone;
             if (memberAnswers.position === 'I am finished building my team!') {
                 console.log("finished");
 
@@ -199,33 +198,22 @@ const addMember = () => {
             }
             else if (memberAnswers.position === 'Add an Intern') {
                 const school = memberAnswers.school
-                const intern = new Intern(name, id, email, phone, school);
+                const intern = new Intern(name, id, email, school);
                 employees.push(intern);
                 console.log(intern);
                 console.log(employees);
             }
             else {
                 const github = memberAnswers.github;
-                const engineer = new Engineer(name, id, email, phone, github);
+                const engineer = new Engineer(name, id, email, github);
                 employees.push(engineer);
                 console.log(engineer);
                 console.log(employees);
-
             }
 addMember();
         })
 }
 
-
-
-// function writeFile (employees){
-//     fs.writeFile(outputPath, employees, (err) => {
-//         if (err) throw new Error(err);
-
-//         console.log('Success! Your employee team page should now appear.');
-
-//     })
-// }
 
 BuildTeam()
 
