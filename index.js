@@ -4,7 +4,11 @@ const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 const Engineer = require('./lib/Engineer');
 const Employee = require('./lib/Employee');
-const generatePage = require('./dist/generatePage')
+const generatePage = require('./src/generatePage');
+const path = require('path');
+
+const outputDirectory = path.resolve(__dirname, 'dist');
+const outputPath = path.join(outputDirectory, 'index.html');
 
 employees = [];
 
@@ -182,44 +186,43 @@ const addMember = () => {
 
             }
             else if (memberAnswers.position === 'Add an Intern') {
-                    const school = memberAnswers.school
-                    const intern = new Intern (name, id, email, phone, school);
-                    employees.push(intern);
-                    console.log(intern);
-                    console.log(employees);
-                    addMember();
-                }
-                else {
-                    const github = memberAnswers.github;
-                    const engineer = new Engineer(name, id, email, phone, github);
-                    employees.push(engineer);
-                    console.log(engineer);
-                    console.log(employees);
-                    addMember();
-                    
-                }
-                console.log(employees)
-            const writeFile = employees => 
-            fs.writeFile('./src/index.html', employees, (err) => {
-                if (err) throw new Error(err);
-        
-                console.log('Success! Your employee team page should now appear.');
-        });
+                const school = memberAnswers.school
+                const intern = new Intern(name, id, email, phone, school);
+                employees.push(intern);
+                console.log(intern);
+                console.log(employees);
+                addMember();
+            }
+            else {
+                const github = memberAnswers.github;
+                const engineer = new Engineer(name, id, email, phone, github);
+                employees.push(engineer);
+                console.log(engineer);
+                console.log(employees);
+                addMember();
+
+            }
+            console.log(employees)
+
             writeFile(generatePage(employees));
-            return generatePage(employees);
         })
-    }
-    
-
-        //err => if (err) throw new Error(err);
+}
 
 
 
+function writeFile (employees){
+    fs.writeFile(outputPath, employees, (err) => {
+        if (err) throw new Error(err);
+
+        console.log('Success! Your employee team page should now appear.');
+
+    })
+}
 
 
-BuildTeam()
 
- 
-module.exports = BuildTeam
+
+        BuildTeam()
+
 
 
