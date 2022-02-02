@@ -37,7 +37,7 @@ const generatePage = (employees) => {
         <div class = "cardBody">
            <ul>  <p class = "item"> Employee ID: ${Engineer.getId()}</p></ul>
            <ul> <p class = "item"> Email: <a href = mailto: ${Engineer.getEmail()}>${Engineer.getEmail()} </a> </p></ul>
-           <ul> <p class = "item"> Office Number: ${Engineer.getGithub()} </p></ul>
+           <ul> <p class = "item"> GitHub: <a href = https://github.com/${Engineer.getGithub()} target=_blank> ${Engineer.getGithub()}</a> </p></ul>
         </div>
         </div>
         </li>`
@@ -55,7 +55,7 @@ const generatePage = (employees) => {
         <div class = "cardBody">
            <ul>  <p class = "item"> Employee ID: ${Intern.getId()}</p></ul>
            <ul> <p class = "item"> Email: <a href = mailto: ${Intern.getEmail()}>${Intern.getEmail()} </a> </p></ul>
-           <ul> <p class = "item"> Office Number: ${Intern.getSchool()} </p></ul>
+           <ul> <p class = "item"> School: ${Intern.getSchool()} </p></ul>
         </div>
         </div>
         </li>`

@@ -58,7 +58,7 @@ const BuildTeam = () => {
         {
             //clear input when isNaN
             type: 'input',
-            name: 'phone',
+            name: 'officeNumber',
             message: `Please enter the manager's phone number:  `,
             validate: officeNumber => {
                 if (isNaN(officeNumber)) {
