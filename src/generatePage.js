@@ -9,17 +9,26 @@ const generatePage = (employees) => {
     })
     function generateManager (Manager) {
         return `
-        ${Manager.getName()}`
+        <li>
+        <div class = "cardHead">
+          <ul>  <h4>${Manager.getName()} </h4> </ul>
+          <ul> <h5><em>${Manager.getRole()}</em></h5> </ul>
+        </div>
+        <div class = "cardBody">
+          <ul>  <p class = "id"> ${Manager.getId()}</p></ul>
+           <ul> <p class = "email"> <a href = mailto: ${Manager.getEmail()}> ${Manager.getEmail()} </a> </p></ul>
+        </div>
+        </li>`
     }
 
-    function generateManager (Manager) {
+    function generateEngineer (Engineer) {
         return `
-        ${Manager.getName()}`
+        ${Engineer.getName()}`
     }
 
-    function generateManager (Manager) {
+    function generateIntern (Intern) {
         return `
-        ${Manager.getName()}`
+        ${Intern.getName()}`
     }
 
     const html =[]; 
@@ -29,15 +38,12 @@ const generatePage = (employees) => {
 
 
     html.push(employees.filter(employee => employee.getRole() === 'Engineer')
-    .map(engineer => generateManager(engineer)).join(''));
-
-//map - similar to for each. takes object one at a time 
+    .map(engineer => generateEngineer(engineer)).join(''));
 
 
     html.push(employees.filter(employee => employee.getRole() === 'Intern')
-    .map(intern => generateManager(intern)).join(''));
+    .map(intern => generateIntern(intern)).join(''));
 
-    //add engineer and intern function 
 
     return html.join('');
 };
@@ -69,42 +75,3 @@ module.exports = team =>{
 };
 
 
-
-
-
-
-    // return `
-    // <!DOCTYPE html> 
-
-    // <head>
-    //     <meta charset="utf-8">
-    //     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    //     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    //     <meta name="viewport" content="width=device-width, initial-scale=1">
-    //     <link rel="stylesheet" href="style.css">
-    //     <title>Team Profiles</title>
-    // </head>
-    
-    // <body>
-    //     <header>My Team</header>
-    
-    //     <div class="container">
-    //         <div class="row">
-
-
-
-    //             <div class = "cardHead">
-    //                 <h4> ${name} </h4>
-    //                 <h4> ${name}</h4>
-    //             </div>
-    //             <div class = "cardBody">
-    //                 <p class = "id"> ${id}</p>
-    //                 <p class = "email"> <a href = mailto: ${email}> ${email} </a> </p>
-
-
-
-    //         </div>
-    //     </div>
-
-    // </body>
-    // `;
