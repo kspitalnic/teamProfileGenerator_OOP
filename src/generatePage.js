@@ -11,18 +11,32 @@ const generatePage = (employees) => {
         return `
         ${Manager.getName()}`
     }
+
+    function generateManager (Manager) {
+        return `
+        ${Manager.getName()}`
+    }
+
+    function generateManager (Manager) {
+        return `
+        ${Manager.getName()}`
+    }
+
     const html =[]; 
+
     html.push(employees.filter(employee => employee.getRole() === 'Manager')
     .map(manager => generateManager(manager)));
 
+
     html.push(employees.filter(employee => employee.getRole() === 'Engineer')
-    .map(engineer => generateManager(engineer))).join('');
-    
+    .map(engineer => generateManager(engineer)).join(''));
+
 //map - similar to for each. takes object one at a time 
 
 
     html.push(employees.filter(employee => employee.getRole() === 'Intern')
-    .map(intern => generateManager(intern))).join('');
+    .map(intern => generateManager(intern)).join(''));
+
     //add engineer and intern function 
 
     return html.join('');
@@ -76,7 +90,9 @@ module.exports = team =>{
     
     //     <div class="container">
     //         <div class="row">
-    ---
+
+
+
     //             <div class = "cardHead">
     //                 <h4> ${name} </h4>
     //                 <h4> ${name}</h4>
@@ -84,7 +100,9 @@ module.exports = team =>{
     //             <div class = "cardBody">
     //                 <p class = "id"> ${id}</p>
     //                 <p class = "email"> <a href = mailto: ${email}> ${email} </a> </p>
----
+
+
+
     //         </div>
     //     </div>
 

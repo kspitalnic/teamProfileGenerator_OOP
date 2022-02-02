@@ -184,6 +184,18 @@ const addMember = () => {
             if (memberAnswers.position === 'I am finished building my team!') {
                 console.log("finished");
 
+                function writeFile(employees) {
+                    fs.writeFile(outputPath, employees, (err) => {
+                        if (err) throw new Error(err);
+
+                        console.log('Success! Your employee team page should now appear.');
+
+                    })
+                }
+
+                writeFile(generatePage(employees));
+                return 
+
             }
             else if (memberAnswers.position === 'Add an Intern') {
                 const school = memberAnswers.school
@@ -191,7 +203,6 @@ const addMember = () => {
                 employees.push(intern);
                 console.log(intern);
                 console.log(employees);
-                addMember();
             }
             else {
                 const github = memberAnswers.github;
@@ -199,30 +210,24 @@ const addMember = () => {
                 employees.push(engineer);
                 console.log(engineer);
                 console.log(employees);
-                addMember();
 
             }
-            console.log(employees)
-
-            writeFile(generatePage(employees));
+addMember();
         })
 }
 
 
 
-function writeFile (employees){
-    fs.writeFile(outputPath, employees, (err) => {
-        if (err) throw new Error(err);
+// function writeFile (employees){
+//     fs.writeFile(outputPath, employees, (err) => {
+//         if (err) throw new Error(err);
 
-        console.log('Success! Your employee team page should now appear.');
+//         console.log('Success! Your employee team page should now appear.');
 
-    })
-}
+//     })
+// }
 
-
-
-
-        BuildTeam()
+BuildTeam()
 
 
 
