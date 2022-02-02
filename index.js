@@ -22,7 +22,7 @@ const BuildTeam = () => {
                 if (managerEmail) {
                     return true;
                 } else {
-                    console.log('Please enter the manager"s name.')
+                    console.log("Please enter the manager's name.")
                     return false;
                 }
             }
@@ -33,8 +33,8 @@ const BuildTeam = () => {
             name: 'id',
             message: `Please enter the manager's employee ID number:  `,
             validate: managerID => {
-                if (isNaN(managerID)) {
-                    console.log('Please enter the manager"s ID number.');
+                if ((isNaN(managerID)) || (!(managerID))) {
+                    console.log("Please enter the manager's ID number.");
                     return false;
                 } else {
                     return true;
@@ -45,12 +45,12 @@ const BuildTeam = () => {
             //make only accept an email
             type: 'input',
             name: 'email',
-            message: `Please enter the manager's email address:  `,
+            message: "Please enter the manager's email address:  ",
             validate: managerEmail => {
                 if (managerEmail) {
                     return true;
                 } else {
-                    console.log('Please enter the manager"s email.')
+                    console.log("Please enter the manager`s email.")
                     return false;
                 }
             }
@@ -62,7 +62,7 @@ const BuildTeam = () => {
             message: `Please enter the manager's phone number:  `,
             validate: officeNumber => {
                 if (isNaN(officeNumber)) {
-                    console.log('Please enter the manager"s phone number.')
+                    console.log("Please enter the manager's phone number.")
                     return false;
                 } else {
                     return true;
@@ -117,8 +117,8 @@ const addMember = () => {
             type: 'input',
             name: 'id',
             message: `Please enter the employee's ID number:  `,
-            validate: managerID => {
-                if (isNaN(managerID)) {
+            validate: id => {
+                if ((isNaN(id)) || (!(id))) {
                     console.log("Please enter the employee's ID number.");
                     return false;
                 } else {

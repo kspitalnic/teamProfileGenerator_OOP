@@ -27,15 +27,38 @@ const generatePage = (employees) => {
 
     function generateEngineer (Engineer) {
         return `
-        //<i class="fas fa-glasses"></i>
-
-        ${Engineer.getName()}`
+        <li>
+        <div class = "card">
+        <div class = "cardHead">
+          <ul>  <h4>${Engineer.getName()} </h4> </ul>
+          <ul> <h5> <i class="fas fa-glasses"> </i></i>
+          <em> ${Engineer.getRole()}</em></h5> </ul>
+        </div>
+        <div class = "cardBody">
+           <ul>  <p class = "item"> Employee ID: ${Engineer.getId()}</p></ul>
+           <ul> <p class = "item"> Email: <a href = mailto: ${Engineer.getEmail()}>${Engineer.getEmail()} </a> </p></ul>
+           <ul> <p class = "item"> Office Number: ${Engineer.getGithub()} </p></ul>
+        </div>
+        </div>
+        </li>`
     }
 
     function generateIntern (Intern) {
         return `
-        // <i class="fas fa-user-graduate"></i>
-        ${Intern.getName()}`
+        <li>
+        <div class = "card">
+        <div class = "cardHead">
+          <ul>  <h4>${Intern.getName()} </h4> </ul>
+          <ul> <h5> <i class="fas fa-user-graduate"> </i></i>
+          <em> ${Intern.getRole()}</em></h5> </ul>
+        </div>
+        <div class = "cardBody">
+           <ul>  <p class = "item"> Employee ID: ${Intern.getId()}</p></ul>
+           <ul> <p class = "item"> Email: <a href = mailto: ${Intern.getEmail()}>${Intern.getEmail()} </a> </p></ul>
+           <ul> <p class = "item"> Office Number: ${Intern.getSchool()} </p></ul>
+        </div>
+        </div>
+        </li>`
     }
 
     const html =[]; 
@@ -73,7 +96,7 @@ module.exports = team =>{
     <body>
         <header>My Team</header>
     
-        <div class="container">
+        <div class="container col-md-5">
             <div class="row">
             ${generatePage(team)}
             </div>
