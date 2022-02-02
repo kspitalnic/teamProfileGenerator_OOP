@@ -13,3 +13,39 @@ header {
 .container {
     max-width: 100%; 
 }
+
+li {
+    list-style-type: none;
+    padding: 10px;
+
+}
+ 
+li ul {
+    margin: 0;
+    padding: 0 10px;
+}
+
+.card {
+    margin: 10px;
+    box-shadow: 0 10px 10px 0 gray;
+}
+
+.cardHead {
+    padding-top: 10px;
+    color:white;
+    background-color: rgb(63, 174, 243);
+}
+
+.cardBody {
+    border: solid, 1px, black;
+    background-color: rgb(228, 227, 227);
+    padding: 40px 20px; 
+    align-items: center;
+}
+
+.item {
+    border:rgb(228, 227, 227) solid .2px;
+    background-color: white;
+    margin: 0;
+    padding: 1px;
+}

@@ -10,13 +10,16 @@ const generatePage = (employees) => {
     function generateManager (Manager) {
         return `
         <li>
+        <div class = "card">
         <div class = "cardHead">
           <ul>  <h4>${Manager.getName()} </h4> </ul>
           <ul> <h5><em>${Manager.getRole()}</em></h5> </ul>
         </div>
         <div class = "cardBody">
-          <ul>  <p class = "id"> ${Manager.getId()}</p></ul>
-           <ul> <p class = "email"> <a href = mailto: ${Manager.getEmail()}> ${Manager.getEmail()} </a> </p></ul>
+           <ul>  <p class = "item"> Employee ID: ${Manager.getId()}</p></ul>
+           <ul> <p class = "item"> Email: <a href = mailto: ${Manager.getEmail()}>${Manager.getEmail()} </a> </p></ul>
+           <ul> <p class = "item"> Office Number: ${Manager.getOfficeNumber()} </p></ul>
+        </div>
         </div>
         </li>`
     }
