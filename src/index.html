@@ -1,9 +1,4 @@
-const Manager = require('../lib/Manager.js');
 
-
-const generatePage = (employees) => {
-    console.log(employees);
-    return `
     <!DOCTYPE html> 
 
     <head>
@@ -21,19 +16,15 @@ const generatePage = (employees) => {
         <div class="container">
             <div class="row">
                 <div class = "cardHead">
-                    <h4> ${Manager.getPosition} </h4>
-                    <h4> ${Manager.name}</h4>
+                    <h4> undefined </h4>
+                    <h4> Manager</h4>
                 </div>
                 <div class = "cardBody">
-                    <p class = "id"> ${Manager.id}</p>
-                    <p class = "email"> <a href = mailto: ${Manager.email}> ${Manager.email} </a> </p>
+                    <p class = "id"> undefined</p>
+                    <p class = "email"> <a href = mailto: undefined> undefined </a> </p>
 
             </div>
         </div>
 
     </body>
-    `;
-  };
-
-module.exports = generatePage;
-
+    
