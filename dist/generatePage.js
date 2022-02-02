@@ -2,7 +2,11 @@ const Manager = require('../lib/Manager.js');
 
 
 const generatePage = (employees) => {
-    console.log(employees);
+    employees = JSON.parse(employees);
+    console.log('result' + employees);
+    Object.keys(employees).forEach(key => {
+        console.log(key, employees[key].name);
+      });
     return `
     <!DOCTYPE html> 
 
