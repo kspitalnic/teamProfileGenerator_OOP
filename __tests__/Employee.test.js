@@ -7,7 +7,6 @@ it('should create an object for each employee', () => {
   expect(employee.getName()).toBe('name');
   expect(employee.getId()).toEqual(401);
   expect(employee.getEmail()).toBe('email@gmail.com');
-  expect(employee.getRole()).toBe('Employee');
 });
 
 
