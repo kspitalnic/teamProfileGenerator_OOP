@@ -186,7 +186,7 @@ const addMember = () => {
                     fs.writeFile(outputPath, employees, (err) => {
                         if (err) throw new Error(err);
 
-                        console.log('Success! Your employee team page should now appear.');
+                        console.log('Success! Your employee team page should now appear. Please open index.html.');
 
                     })
                 }

@@ -8,7 +8,7 @@ To use this application, it is necessary to clone the repository, cd into the fo
 
 To test this application, open its directory in VS code and type 'npm run test' into the terminal. All tests should pass for the 4 tested classes.
 
-Example: https://watch.screencastify.com/v/azCkDi07NsZXpDL3fV0L
+Example: https://watch.screencastify.com/v/Rkigt28fCCUSLdzcIdaL
 
 ## Strategies Used 
 * Object Oriented Programming
